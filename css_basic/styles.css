@@ -51,3 +51,64 @@ header ul li a {
     color: #fff;
     text-decoration: none;
 }
+
+
+
+/* Logo styling */
+header ul li.logo {
+    font-size: 2rem;      /* Bigger size */
+    margin-right: 20px;   /* Space after logo */
+    color: #FFD700;       /* Gold color */
+}
+
+/* Header styling */
+header {
+    background-color: #2c3e50; /* Dark blue-gray */
+    padding: 15px;
+    border-bottom: 3px solid #1abc9c; /* Decorative bottom border */
+}
+
+/* Header links */
+header ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    color: #1abc9c; /* Hover effect */
+}
+
+/* Article styling */
+article {
+    background-color: #fffbea;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Aside styling */
+aside {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer styling */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 15px;
+    border-top: 3px solid #1abc9c;
+}
+
+/* Table styling */
+table th {
+    background-color: #1abc9c;
+}
+
+table td, table th {
+    border: 1px solid #16a085;
+}
