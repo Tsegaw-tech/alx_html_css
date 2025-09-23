@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Make body a flex container in column direction */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* Make main a flex container in row direction */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* Automatic height and width */
+    gap: 20px; /* Optional spacing between article and aside */
+}
+
+/* Article takes 2/3 of main width, scrollable */
+article {
+    flex: 2;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Aside takes 1/3 of main width, scrollable */
+aside {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #eaeaea;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Optional: Header and footer styling */
+header, footer {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Header navigation */
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
