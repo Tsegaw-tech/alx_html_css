@@ -76,15 +76,3 @@ Front-End Developer | ALX Student
 📧 Tsegaw.grace@gmail.com  
 🌐 https://github.com/Tsegaw-tech
 
----
-
-## 📌 Notes & Tips Before Submission
-
-1. Make sure **README.md** is located in the `headphones/` folder (i.e. `alx_html_css/headphones/README.md`).  
-2. Replace placeholder email or portfolio with your actual contact or link.  
-3. Use clean markdown — headings, bullet points, code blocks, links.  
-4. Commit with a clear message, e.g.:  
-   ```bash
-   git add headphones/README.md
-   git commit -m "Add README for Headphones project"
-   git push

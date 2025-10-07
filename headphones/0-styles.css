@@ -1,0 +1,188 @@
+/* =============== RESET =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ff6565;
+  --text-color: #fff;
+  --max-width: 1000px;
+  --font-main: "Source Sans Pro", sans-serif;
+}
+
+/* =============== BODY =============== */
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* =============== HEADER =============== */
+.header {
+  width: 100%;
+  padding: 20px 0;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent; /* removed black background */
+}
+
+.header .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: transparent; /* no background in header */
+}
+
+.logo img {
+  height: 40px;
+  align-items: center;
+}
+
+/* Navigation */
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover,
+.nav a:active {
+  color: var(--primary-color);
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* =============== MENU ICON =============== */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 21px;
+  top: 38px;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: var(--text-color);
+  border-radius: 2px;
+}
+
+/* =============== HERO SECTION =============== */
+.hero {
+  background: url("images/headphones_hero_1.jpg") no-repeat center/cover;
+  height: 100vh; /* full screen always */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+  margin-top:200px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hero button:hover,
+.hero button:active {
+  opacity: 0.9;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* =============== MOBILE VIEW =============== */
+@media (max-width: 480px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background: transparent; /* no black menu */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 15;
+  }
+
+  #menu-toggle:checked + .menu-icon + .logo + .nav {
+    display: block;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .header {
+    background: transparent; /* no black header */
+  }
+
+  /* keeps hero full screen */
+  .hero {
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
