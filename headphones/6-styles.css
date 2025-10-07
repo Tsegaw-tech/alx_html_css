@@ -1,0 +1,235 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ff6565;
+  --text-color: #fff;
+  --max-width: 1000px;
+  --font-main: "Source Sans Pro", sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 10;
+}
+
+.header .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* MENU ICON */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 21px;
+  top: 38px;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: var(--text-color);
+}
+
+/* HERO */
+.hero {
+  background: url("images/headphones_hero_1.jpg") no-repeat center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+  margin-top: 200px;
+}
+
+.hero button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px 40px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  opacity: 0.9;
+}
+
+/* WHAT WE DO */
+.what-we-do {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service {
+  flex: 1 1 calc(25% - 30px);
+}
+
+.service span {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+/* OUR RESULTS (no image background, pure CSS pentagons) */
+.our-results {
+  background: #000;
+  color: var(--text-color);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.results {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.result-item {
+  flex: 1 1 calc(25% - 30px);
+  display: flex;
+  justify-content: center;
+}
+
+.pentagon {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: var(--primary-color);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.pentagon:hover {
+  transform: scale(1.05);
+}
+
+/* CONTACT US */
+.contact-us {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form .btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  background: #000;
+  color: var(--text-color);
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: var(--max-width);
+  margin: 0 auto 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+}

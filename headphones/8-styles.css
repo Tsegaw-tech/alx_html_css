@@ -1,0 +1,538 @@
+/* =============== RESET =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ff6565;
+  --text-color: #fff;
+  --max-width: 1000px;
+  --font-main: "Source Sans Pro", sans-serif;
+}
+
+/* =============== BODY =============== */
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* =============== HEADER =============== */
+.header {
+  width: 100%;
+  padding: 20px 0;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent; /* removed black background */
+}
+
+.header .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: transparent; /* no background in header */
+}
+
+.logo img {
+  height: 40px;
+  align-items: center;
+}
+
+/* Navigation */
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover,
+.nav a:active {
+  color: var(--primary-color);
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* =============== MENU ICON =============== */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 21px;
+  top: 38px;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: var(--text-color);
+  border-radius: 2px;
+}
+
+/* =============== HERO SECTION =============== */
+.hero {
+  background: url("images/headphones_hero_1.jpg") no-repeat center/cover;
+  height: 100vh; /* full screen always */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+  margin-top:200px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hero button:hover,
+.hero button:active {
+  opacity: 0.9;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* =============== MOBILE VIEW =============== */
+@media (max-width: 480px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background: transparent; /* no black menu */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 15;
+  }
+
+  #menu-toggle:checked + .menu-icon + .logo + .nav {
+    display: block;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .header {
+    background: transparent; /* no black header */
+  }
+
+  /* keeps hero full screen */
+  .hero {
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* =============== WHAT WE DO SECTION =============== */
+.what-we-do {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.what-we-do .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.what-we-do h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.what-we-do .intro-text {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service {
+  flex: 1 1 calc(25% - 30px);
+  padding: 20px;
+}
+
+.service span {
+  font-size: 4rem;
+  color: var(--primary-color);
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.service h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.service p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* =============== OUR RESULTS SECTION =============== */
+.our-results {
+  background: url("images/headphones_hero_2.jpg") no-repeat center/cover;
+  color: var(--text-color);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.our-results .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.our-results h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.our-results .intro-text {
+  max-width: 650px;
+  margin: 0 auto 60px;
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Result Pentagon */
+.results {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.result-item {
+  flex: 1 1 calc(25% - 30px);
+  display: flex;
+  justify-content: center;
+}
+
+/* Result Section */
+.results {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.result-item {
+  flex: 1 1 calc(25% - 30px);
+  display: flex;
+  justify-content: center;
+}
+
+/* =============== OUR RESULTS SECTION =============== */
+.pentagon {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: var(--primary-color); /* same as button color */
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  color: #fff; /* white text */
+  text-align: center;
+}
+
+.pentagon:hover {
+  transform: scale(1.05);
+}
+
+.pentagon h3 {
+  font-size: 2rem;
+  color: #fff; /* white text */
+  margin-bottom: 5px;
+}
+
+.pentagon p {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .results {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pentagon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+/* =============== CONTACT US SECTION =============== */
+.contact-us {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.contact-us .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-us h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+  border-color: var(--primary-color);
+}
+
+/* Button styling (reused from hero button) */
+.contact-form .btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  align-self: center;
+}
+
+.contact-form .btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .contact-us {
+    padding: 80px 15px;
+  }
+
+  .contact-us h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-form .form-group input,
+  .contact-form .form-group textarea {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* =============== FOOTER SECTION =============== */
+.footer {
+  background: #000;
+  color: var(--text-color);
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: var(--max-width);
+  margin: 0 auto 20px;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive Footer */
+@media (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    height: 35px;
+  }
+}
+
+
+/* =============== ANIMATIONS =============== */
+
+/* WHAT WE DO – subtle hover scale & lift */
+.service {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* OUR RESULTS – soft bounce animation on hover */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.pentagon {
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+/* floating effect for all pentagons */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* when hovered – stronger bounce + glow */
+.pentagon:hover {
+  animation: bounce 0.6s ease;
+  box-shadow: 0 0 15px var(--primary-color);
+  transform: scale(1.05);
+}
